@@ -1,0 +1,8 @@
+{
+  "name": "vektra-landing",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-landing.mjs"
+  }
+}
