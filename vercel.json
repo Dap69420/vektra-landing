@@ -1,5 +1,5 @@
 {
-  "buildCommand": "node scripts/build-landing.mjs",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "installCommand": ""
+  "installCommand": "npm install"
 }

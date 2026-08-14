@@ -1,144 +1,32 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vektra — Demo submission & release delivery for labels</title>
-  <meta name="description" content="Vektra is the demo intake, A&R, and release delivery workspace for labels and collectives. Submit, review, and ship releases from one place.">
-  <link rel="icon" type="image/png" href="assets/logo.png">
-  <link rel="apple-touch-icon" href="assets/logo.png">
-  <link rel="stylesheet" href="assets/styles.css">
-</head>
-<body>
-  <header class="nav">
-    <a class="brand" href="/">
-      <img src="assets/logo.png" alt="" class="brand-logo">
-      <strong>Vektra</strong>
-    </a>
-    <nav class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#for-artists">For artists</a>
-      <a href="#for-labels">For labels</a>
-      <a href="https://docs.vektra.games">Docs</a>
-      <a href="https://discord.gg/Hysd3GSQxQ">Support</a>
-    </nav>
-    <div class="nav-actions">
-      <a class="ghost-button" href="https://dashboard.vektra.games">Staff login</a>
-      <a class="green-button" href="https://artists.vektra.games">Artist portal</a>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <p class="eyebrow">Vektra</p>
-      <h1>From demo to release, in one workspace.</h1>
-      <p class="hero-sub">Vektra handles demo intake, A&R review, support tickets, and release delivery for labels and collectives — with a Discord bot, a staff dashboard, and a portal where artists can track everything they've submitted.</p>
-      <div class="hero-actions">
-        <a class="green-button large" href="https://artists.vektra.games">Open artist portal</a>
-        <a class="outline-button large" href="https://dashboard.vektra.games">Staff dashboard</a>
-      </div>
-      <div class="hero-notes">
-        <span>Discord OAuth</span>
-        <span>Per-guild storage</span>
-        <span>Release QC delivery</span>
-      </div>
-    </section>
-
-    <section class="features" id="features">
-      <h2>One platform, three places</h2>
-      <div class="feature-grid">
-        <article class="feature-card">
-          <span class="feature-emoji">🤖</span>
-          <h3>Discord bot</h3>
-          <p>Submit demos, open support tickets, and make release requests right from your server. The bot handles cooldowns, intake gating, and AI demo checks.</p>
-        </article>
-        <article class="feature-card">
-          <span class="feature-emoji">🎛️</span>
-          <h3>Staff dashboard</h3>
-          <p>Review submissions, manage tickets, edit branding and panel templates, and ship releases through QC — all behind Discord OAuth with per-guild permissions.</p>
-          <a class="card-link" href="https://dashboard.vektra.games">Go to dashboard →</a>
-        </article>
-        <article class="feature-card">
-          <span class="feature-emoji">🎵</span>
-          <h3>Artist portal</h3>
-          <p>Artists log in with Discord to see the status of every demo and release they've submitted across every label running Vektra — no Discord required.</p>
-          <a class="card-link" href="https://artists.vektra.games">Go to portal →</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="split" id="for-artists">
-      <div class="split-copy">
-        <p class="eyebrow">For artists</p>
-        <h2>Track your demos and releases in one place.</h2>
-        <p>Stop DMing staff to ask "any update?". Log in with your Discord account and see the status of every submission and release you've sent to any Vektra label — In Queue, Shortlisted, Approved, or shipped.</p>
-        <ul class="check-list">
-          <li>One login, all labels you've submitted to</li>
-          <li>Live status on demos, shortlists, and decisions</li>
-          <li>Release request tracking through QC</li>
-          <li>Decision DMs mirrored on the web</li>
-        </ul>
-        <a class="green-button" href="https://artists.vektra.games">Open the artist portal</a>
-      </div>
-      <div class="split-panel">
-        <div class="mock-status">
-          <div class="mock-row"><span class="pill queue">In Queue</span><strong>Midnight Loop</strong><small>Dap Media</small></div>
-          <div class="mock-row"><span class="pill shortlist">Shortlisted</span><strong>Paper Engine</strong><small>Northbound</small></div>
-          <div class="mock-row"><span class="pill approved">Approved</span><strong>Glasswork</strong><small>Dap Media</small></div>
-          <div class="mock-row"><span class="pill shipped">Shipped</span><strong>REL-9F2C</strong><small>Northbound</small></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="split reverse" id="for-labels">
-      <div class="split-copy">
-        <p class="eyebrow">For labels &amp; collectives</p>
-        <h2>A&R, support, and delivery — without the spreadsheets.</h2>
-        <p>Vektra runs per-server so each label keeps its own branding, staff channel, and storage. Pro and Pro+ unlock analytics, message broadcasting, white-label bots, and release delivery.</p>
-        <ul class="check-list">
-          <li>Demo intake with AI spam checks and cooldowns</li>
-          <li>Branded submit &amp; ticket panels, DM templates</li>
-          <li>Managed regions or your own Neon/Postgres</li>
-          <li>Release QC delivery with staff review threads</li>
-        </ul>
-        <a class="outline-button" href="https://dashboard.vektra.games">Open the staff dashboard</a>
-      </div>
-      <div class="split-panel">
-        <div class="mock-stats">
-          <div><span>Total demos</span><strong>428</strong></div>
-          <div><span>Accepted rate</span><strong>21%</strong></div>
-          <div><span>Open tickets</span><strong>12</strong></div>
-          <div><span>Avg review</span><strong>1.8d</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <h2>Ready to ship your next release?</h2>
-      <p>Artists head to the portal. Labels head to the dashboard.</p>
-      <div class="hero-actions">
-        <a class="green-button large" href="https://artists.vektra.games">Artist portal</a>
-        <a class="outline-button large" href="https://dashboard.vektra.games">Staff dashboard</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <a class="brand" href="/">
-        <img src="assets/logo.png" alt="" class="brand-logo">
-        <strong>Vektra</strong>
-      </a>
-      <nav class="footer-links">
-        <a href="https://artists.vektra.games">Artist portal</a>
-        <a href="https://dashboard.vektra.games">Dashboard</a>
-        <a href="https://docs.vektra.games">Docs</a>
-        <a href="https://discord.gg/Hysd3GSQxQ">Support</a>
-      </nav>
-      <p class="footer-copy">© Vektra</p>
-    </div>
-  </footer>
-
-  <script src="assets/script.js"></script>
-</body>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vektra — Demo submission &amp; release delivery for labels</title>
+    <meta name="description" content="Vektra is the demo intake, A&R, and release delivery workspace for labels and collectives. Submit, review, and ship releases from one place — with a Discord bot, a staff dashboard, and an artist portal." />
+    <meta property="og:title" content="Vektra — Demo submission &amp; release delivery for labels" />
+    <meta property="og:description" content="From demo to release, in one workspace. Submit, review, and ship releases from one place." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <link rel="apple-touch-icon" href="/assets/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&family=Geist:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <script>
+      (function() {
+        const theme = localStorage.getItem('vektra-theme') || 'dark';
+        if (theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-white text-zinc-900 dark:bg-black dark:text-zinc-100 font-sans antialiased selection:bg-zinc-800 selection:text-white dark:selection:bg-zinc-200 dark:selection:text-black">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
