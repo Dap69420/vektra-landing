@@ -6,6 +6,14 @@
     {
       "source": "/pricing",
       "destination": "/pricing.html"
+    },
+    {
+      "source": "/checkout",
+      "destination": "/checkout.html"
+    },
+    {
+      "source": "/thank-you",
+      "destination": "/thank-you.html"
     }
   ]
 }

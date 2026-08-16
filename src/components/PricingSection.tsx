@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 
 interface Plan {
+  id: string;
   name: string;
   price: string;
   period: string;
@@ -25,6 +26,7 @@ interface Plan {
 
 const PLANS: Plan[] = [
   {
+    id: 'free',
     name: 'Free',
     price: '$0',
     period: 'forever',
@@ -38,6 +40,7 @@ const PLANS: Plan[] = [
     cta: 'Start Free',
   },
   {
+    id: 'starter',
     name: 'Starter',
     price: '$3.99',
     period: 'every 2 months',
@@ -54,6 +57,7 @@ const PLANS: Plan[] = [
     popular: true,
   },
   {
+    id: 'pro',
     name: 'Pro',
     price: '$8.99',
     period: '/month',
@@ -68,6 +72,7 @@ const PLANS: Plan[] = [
     cta: 'Go Pro',
   },
   {
+    id: 'pro_plus',
     name: 'Pro+',
     price: '$16.99',
     period: '/month',
@@ -176,9 +181,9 @@ export function PricingSection() {
                 </ul>
 
                 <a
-                  href="https://discord.gg/AMUaEFxTDE"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={plan.id === 'free' ? 'https://discord.gg/AMUaEFxTDE' : `/checkout?plan=${plan.id}`}
+                  target={plan.id === 'free' ? '_blank' : undefined}
+                  rel={plan.id === 'free' ? 'noopener noreferrer' : undefined}
                   className={`inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg text-xs font-semibold transition-all active:scale-[0.98] ${
                     plan.popular
                       ? 'bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm shadow-emerald-900/40'
@@ -193,8 +198,8 @@ export function PricingSection() {
           </div>
 
           <p className="text-center text-[11px] text-[#9aa6b2] font-mono mt-8">
-            Plans activate through our Discord — pick your tier, pay with any accepted method, and
-            get set up with the team.
+            Pay instantly with USDT/USDC at the checkout — or use gift cards, Robux, or Discord
+            Nitro/boosts via <a href="mailto:support@dapmedia.tech" className="text-emerald-400 hover:underline">support@dapmedia.tech</a> or a Discord ticket.
           </p>
         </div>
       </section>
