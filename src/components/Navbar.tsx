@@ -25,6 +25,8 @@ interface NavbarProps {
 export function Navbar({ onOpenSubmitModal, onOpenDiscordModal }: NavbarProps) {
   const { theme, setTheme, isDark } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const isHome = typeof window !== 'undefined' ? ['/', '/index.html'].includes(window.location.pathname) : true;
+  const anchor = (id: string) => (isHome ? `#${id}` : `/#${id}`);
 
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-[#0a0d0c]/85 dark:bg-[#0a0d0c]/90 border-b border-[#1f2730] transition-colors">
@@ -32,7 +34,7 @@ export function Navbar({ onOpenSubmitModal, onOpenDiscordModal }: NavbarProps) {
         
         {/* Brand */}
         <div className="flex items-center gap-8">
-          <a href="#" className="flex items-center gap-2.5 group">
+          <a href="/" className="flex items-center gap-2.5 group">
             <VektraLogo className="w-7 h-7" isDark={isDark} />
             <span className="font-bold text-lg tracking-tight text-[#e7edf3] font-mono group-hover:text-emerald-400 transition-colors">
               Vektra
@@ -41,10 +43,16 @@ export function Navbar({ onOpenSubmitModal, onOpenDiscordModal }: NavbarProps) {
 
           {/* Desktop Nav Links */}
           <nav className="hidden md:flex items-center space-x-6 text-sm text-[#9aa6b2]">
-            <a href="#features" className="hover:text-[#e7edf3] transition-colors">Features</a>
-            <a href="#for-artists" className="hover:text-[#e7edf3] transition-colors">For Artists</a>
-            <a href="#for-labels" className="hover:text-[#e7edf3] transition-colors">For Labels</a>
-            <a href="#faq" className="hover:text-[#e7edf3] transition-colors">FAQ</a>
+            <a href={anchor('features')} className="hover:text-[#e7edf3] transition-colors">Features</a>
+            <a href={anchor('for-artists')} className="hover:text-[#e7edf3] transition-colors">For Artists</a>
+            <a href={anchor('for-labels')} className="hover:text-[#e7edf3] transition-colors">For Labels</a>
+            <a
+              href="/pricing"
+              className={`hover:text-[#e7edf3] transition-colors ${isHome ? '' : 'text-emerald-400 font-semibold'}`}
+            >
+              Pricing
+            </a>
+            <a href={anchor('faq')} className="hover:text-[#e7edf3] transition-colors">FAQ</a>
             <a 
               href="https://docs.vektra.games" 
               target="_blank" 
@@ -61,7 +69,7 @@ export function Navbar({ onOpenSubmitModal, onOpenDiscordModal }: NavbarProps) {
           
           {/* Discord Community Link */}
           <a
-            href="https://discord.gg/Hysd3GSQxQ"
+            href="https://discord.gg/AMUaEFxTDE"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-[#9aa6b2] hover:text-[#e7edf3] bg-[#11161a] hover:bg-[#161c22] border border-[#1f2730] rounded-lg transition-colors"
@@ -109,28 +117,35 @@ export function Navbar({ onOpenSubmitModal, onOpenDiscordModal }: NavbarProps) {
         <div className="md:hidden border-b border-[#1f2730] bg-[#0a0d0c] px-4 pt-3 pb-6 space-y-3">
           <div className="space-y-1">
             <a
-              href="#features"
+              href={anchor('features')}
               onClick={() => setIsMobileMenuOpen(false)}
               className="block px-3 py-2 text-sm text-[#e7edf3] hover:bg-[#11161a] rounded-md"
             >
               Features
             </a>
             <a
-              href="#for-artists"
+              href={anchor('for-artists')}
               onClick={() => setIsMobileMenuOpen(false)}
               className="block px-3 py-2 text-sm text-[#e7edf3] hover:bg-[#11161a] rounded-md"
             >
               For Artists
             </a>
             <a
-              href="#for-labels"
+              href={anchor('for-labels')}
               onClick={() => setIsMobileMenuOpen(false)}
               className="block px-3 py-2 text-sm text-[#e7edf3] hover:bg-[#11161a] rounded-md"
             >
               For Labels & Collectives
             </a>
             <a
-              href="#faq"
+              href="/pricing"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block px-3 py-2 text-sm text-[#e7edf3] hover:bg-[#11161a] rounded-md"
+            >
+              Pricing
+            </a>
+            <a
+              href={anchor('faq')}
               onClick={() => setIsMobileMenuOpen(false)}
               className="block px-3 py-2 text-sm text-[#e7edf3] hover:bg-[#11161a] rounded-md"
             >
@@ -145,7 +160,7 @@ export function Navbar({ onOpenSubmitModal, onOpenDiscordModal }: NavbarProps) {
               Documentation
             </a>
             <a
-              href="https://discord.gg/Hysd3GSQxQ"
+              href="https://discord.gg/AMUaEFxTDE"
               target="_blank"
               rel="noopener noreferrer"
               className="block px-3 py-2 text-sm text-[#9aa6b2] hover:text-white"

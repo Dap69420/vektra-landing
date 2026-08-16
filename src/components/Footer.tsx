@@ -5,6 +5,8 @@ import { useTheme } from '../context/ThemeContext';
 
 export function Footer() {
   const { isDark } = useTheme();
+  const isHome = typeof window !== 'undefined' ? ['/', '/index.html'].includes(window.location.pathname) : true;
+  const anchor = (id: string) => (isHome ? `#${id}` : `/#${id}`);
 
   return (
     <footer className="border-t border-[#1f2730] bg-[#0a0d0c] text-[#9aa6b2] text-xs">
@@ -16,7 +18,7 @@ export function Footer() {
           {/* Brand Info */}
           <div className="md:col-span-2 space-y-3">
             <div className="flex items-center gap-2.5">
-              <a href="#" className="flex items-center gap-2.5 group">
+              <a href="/" className="flex items-center gap-2.5 group">
                 <VektraLogo className="w-6 h-6" isDark={true} />
                 <span className="font-bold text-base tracking-tight text-[#e7edf3] font-mono group-hover:text-emerald-400 transition-colors">
                   Vektra
@@ -49,13 +51,16 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#features" className="hover:text-[#e7edf3] transition-colors">Discord Bot Integration</a>
+                <a href={anchor('features')} className="hover:text-[#e7edf3] transition-colors">Discord Bot Integration</a>
               </li>
               <li>
-                <a href="#for-artists" className="hover:text-[#e7edf3] transition-colors">For Artists</a>
+                <a href={anchor('for-artists')} className="hover:text-[#e7edf3] transition-colors">For Artists</a>
               </li>
               <li>
-                <a href="#for-labels" className="hover:text-[#e7edf3] transition-colors">For Labels</a>
+                <a href={anchor('for-labels')} className="hover:text-[#e7edf3] transition-colors">For Labels</a>
+              </li>
+              <li>
+                <a href="/pricing" className="hover:text-[#e7edf3] transition-colors">Pricing</a>
               </li>
             </ul>
           </div>
@@ -72,15 +77,15 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://discord.gg/Hysd3GSQxQ" target="_blank" rel="noopener noreferrer" className="hover:text-[#e7edf3] transition-colors flex items-center gap-1">
+                <a href="https://discord.gg/AMUaEFxTDE" target="_blank" rel="noopener noreferrer" className="hover:text-[#e7edf3] transition-colors flex items-center gap-1">
                   Support Discord <MessageSquare className="w-3 h-3 text-emerald-400" />
                 </a>
               </li>
               <li>
-                <a href="#for-labels" className="hover:text-[#e7edf3] transition-colors">Per-Guild Storage Setup</a>
+                <a href={anchor('for-labels')} className="hover:text-[#e7edf3] transition-colors">Per-Guild Storage Setup</a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-[#e7edf3] transition-colors">Release QC Guidelines</a>
+                <a href={anchor('faq')} className="hover:text-[#e7edf3] transition-colors">Release QC Guidelines</a>
               </li>
             </ul>
           </div>

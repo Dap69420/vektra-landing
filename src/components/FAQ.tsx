@@ -92,7 +92,7 @@ export function FAQ() {
         </p>
         <div className="pt-2">
           <a
-            href="https://discord.gg/Hysd3GSQxQ"
+            href="https://discord.gg/AMUaEFxTDE"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#161c22] hover:bg-[#1f2730] border border-[#1f2730] text-xs font-semibold text-[#e7edf3]"
