@@ -181,7 +181,7 @@ export function PricingSection() {
                 </ul>
 
                 <a
-                  href={plan.id === 'free' ? 'https://discord.gg/AMUaEFxTDE' : `/checkout?plan=${plan.id}`}
+                  href={plan.id === 'free' ? 'https://discord.gg/AMUaEFxTDE' : `https://dashboard.vektra.games/checkout?plan=${plan.id}`}
                   target={plan.id === 'free' ? '_blank' : undefined}
                   rel={plan.id === 'free' ? 'noopener noreferrer' : undefined}
                   className={`inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg text-xs font-semibold transition-all active:scale-[0.98] ${
