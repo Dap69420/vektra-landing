@@ -15,7 +15,7 @@ const DEPAY_WIDGET_CDN = 'https://integrate.depay.com/widgets/v13.js';
 const CHECKOUT_API = 'https://dashboard.vektra.games/api/checkout';
 
 const PLANS: Record<string, {name: string; price: number; period: string; note: string}> = {
-  starter: {name: 'Starter', price: 3.99, period: '2 months', note: '2-month minimum'},
+  starter: {name: 'Starter', price: 0.01, period: '2 months', note: '2-month minimum'},
   pro: {name: 'Pro', price: 8.99, period: 'per month', note: 'Monthly'},
   pro_plus: {name: 'Pro+', price: 16.99, period: 'per month', note: 'Monthly'},
 };
@@ -317,7 +317,7 @@ export function CheckoutSection() {
                 </div>
                 <div className="flex items-center gap-2 text-[11px] text-[#9aa6b2] font-mono">
                   <Check className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Accepted on Polygon, Base &amp; Ethereum</span>
+                  <span>Accepted on Polygon, Base, Ethereum &amp; BNB Chain</span>
                 </div>
                 <div className="flex items-center gap-2 text-[11px] text-[#9aa6b2] font-mono">
                   <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />

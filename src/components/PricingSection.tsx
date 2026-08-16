@@ -42,7 +42,7 @@ const PLANS: Plan[] = [
   {
     id: 'starter',
     name: 'Starter',
-    price: '$3.99',
+    price: '$0.01',
     period: 'every 2 months',
     note: '2-month minimum · or free with ads',
     tagline: 'Full Discord bot workflow for growing labels and collectives.',
