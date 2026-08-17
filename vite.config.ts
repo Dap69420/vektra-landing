@@ -16,6 +16,7 @@ export default defineConfig(() => {
         input: {
           main: path.resolve(__dirname, 'index.html'),
           pricing: path.resolve(__dirname, 'pricing.html'),
+          freqs: path.resolve(__dirname, 'freqs.html'),
         },
       },
     },

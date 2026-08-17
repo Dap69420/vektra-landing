@@ -3,7 +3,7 @@ import {createRoot} from 'react-dom/client';
 import './index.css';
 import {ThemeProvider} from './context/ThemeContext';
 import {Navbar} from './components/Navbar';
-import {CheckoutSection} from './components/CheckoutSection';
+import {FreqsSection} from './components/FreqsSection';
 import {Footer} from './components/Footer';
 
 createRoot(document.getElementById('root')!).render(
@@ -15,7 +15,7 @@ createRoot(document.getElementById('root')!).render(
           onOpenDiscordModal={() => {}}
         />
         <main>
-          <CheckoutSection />
+          <FreqsSection />
         </main>
         <Footer />
       </div>

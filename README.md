@@ -1,6 +1,6 @@
 # Vektra Landing
 
-Static marketing site for `vektra.games`. Links out to the artist portal
+Marketing site for `vektra.games`. Links out to the artist portal
 (`artists.vektra.games`) and the staff dashboard (`dashboard.vektra.games`).
 No login, no backend.
 
@@ -9,13 +9,22 @@ No login, no backend.
 Use `Landing` as the project root.
 
 ```text
-Build Command: node scripts/build-landing.mjs
+Build Command: npm run build
 Output Directory: dist
-Install Command: (none)
+Install Command: npm install
 ```
 
-## Structure
+## Local development
 
-- `index.html` — landing page
-- `assets/` — styles, script, logo (copied into `dist/`)
-- `scripts/build-landing.mjs` — copies `index.html` and `assets/` into `dist/`
+```bash
+npm install
+npm run dev      # Vite dev server
+npm run lint     # tsc --noEmit
+npm run build    # production build to dist/
+```
+
+## Notes
+
+- The favicon/logo (`/assets/logo.png`) is served from `public/assets/`.
+- The demo-tracker panels on the page use sample data — they are marketing
+  previews, not live portal data.
