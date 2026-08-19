@@ -10,6 +10,9 @@ import {
   Users,
   ShoppingCart,
   RefreshCcw,
+  Coins,
+  Check,
+  ArrowUpRight,
 } from 'lucide-react';
 
 const EARN_PLANS = [
@@ -40,17 +43,21 @@ const EARN_PLANS = [
   },
 ];
 
+const FREQS_PACKS = [
+  { freqs: '500', price: '$5', detail: 'Native crypto', bonus: 'Base pack' },
+  { freqs: '1,100', price: '$10', detail: 'Native crypto', bonus: '10% introductory bonus', popular: true },
+  { freqs: '2,500', price: '$20', detail: 'Crypto or MoonPay', bonus: '25% introductory bonus' },
+];
+
 export function FreqsSection() {
   return (
     <div>
       {/* Hero */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 border-b border-[#1f2730]">
         <div className="max-w-4xl mx-auto text-center">
-          <img
-            src="/assets/freqs-icon.webp"
-            alt="Freqs icon"
-            className="w-16 h-16 rounded-2xl mx-auto mb-5 shadow-lg shadow-emerald-900/30"
-          />
+          <div className="w-16 h-16 rounded-2xl mx-auto mb-5 bg-emerald-500/10 border border-emerald-500/25 flex items-center justify-center text-emerald-400 shadow-lg shadow-emerald-900/20">
+            <Coins className="w-8 h-8" />
+          </div>
           <p className="text-emerald-400 text-xs font-mono font-semibold uppercase tracking-wider mb-3">
             Freqs
           </p>
@@ -58,9 +65,33 @@ export function FreqsSection() {
             A new digital currency from Vektra
           </h1>
           <p className="text-[#9aa6b2] text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Freqs is our own in-platform currency — <span className="text-emerald-400 font-mono">100 freqs = $1</span>.
-            Use it for discounts, free services and plans. This is just the beginning.
+            Freqs is Vektra credit — <span className="text-emerald-400 font-mono">100 Freqs = $1</span>.
+            Use it for plan purchases, discounts, and community rewards.
           </p>
+        </div>
+      </section>
+
+      <section className="py-16 px-4 sm:px-6 lg:px-8 border-b border-[#1f2730] bg-[#0c100f]">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-emerald-400 text-xs font-mono font-semibold uppercase tracking-wider mb-3">Buy Freqs</p>
+            <h2 className="text-3xl font-bold text-[#e7edf3] tracking-tight mb-3">Choose your pack</h2>
+            <p className="text-sm text-[#9aa6b2] max-w-xl mx-auto leading-relaxed">Pay directly with your crypto wallet. MoonPay requires a $20 minimum, so it is available only for the 2,500 Freqs pack.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
+            {FREQS_PACKS.map((pack) => (
+              <article key={pack.freqs} className={`relative flex flex-col rounded-xl border p-6 ${pack.popular ? 'border-emerald-500/60 bg-[#0f1714]' : 'border-[#1f2730] bg-[#11161a]'}`}>
+                {pack.popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-emerald-600 px-3 py-1 text-[10px] font-bold font-mono uppercase tracking-wider text-white">Best value</span>}
+                <Coins className="w-5 h-5 text-emerald-400 mb-4" />
+                <h3 className="font-mono text-lg font-bold text-[#e7edf3]">{pack.freqs} Freqs</h3>
+                <div className="mt-2 flex items-baseline gap-2"><strong className="text-3xl font-mono text-[#e7edf3]">{pack.price}</strong><span className="text-xs text-[#9aa6b2]">one time</span></div>
+                <p className="mt-3 text-xs text-emerald-400 font-mono">{pack.bonus}</p>
+                <p className="mt-2 text-xs text-[#9aa6b2]">{pack.detail}</p>
+                <ul className="mt-5 flex-1 space-y-2 text-xs text-[#c3ccd6]"><li className="flex gap-2"><Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />USDT or USDC via direct crypto checkout</li><li className="flex gap-2"><Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />Transaction-hash verification fallback</li></ul>
+                <a href="https://dashboard.vektra.games/#freqs" className={`mt-6 inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-xs font-semibold ${pack.popular ? 'bg-emerald-600 hover:bg-emerald-500 text-white' : 'border border-[#2a3540] bg-[#161c22] hover:bg-[#1f2730] text-[#e7edf3]'}`}>Buy {pack.freqs} Freqs <ArrowUpRight className="w-3.5 h-3.5" /></a>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -97,8 +128,7 @@ export function FreqsSection() {
             </div>
             <p className="text-[#9aa6b2] text-sm leading-relaxed mb-4">
               Freqs is a fresh experiment we started to build early momentum for our community.
-              Right now we're laying the groundwork — the currency exists, and drops are already
-              live in our Discord server.
+              Buy Freqs through crypto checkout, earn them in the community, and use them when you are ready to upgrade.
             </p>
             <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3.5 py-1.5 text-xs font-mono font-semibold text-emerald-300">
               <PartyPopper className="w-3.5 h-3.5" />

@@ -52,6 +52,7 @@ export function Navbar({ onOpenSubmitModal, onOpenDiscordModal }: NavbarProps) {
             >
               Pricing
             </a>
+            <a href="/freqs" className="hover:text-[#e7edf3] transition-colors">Freqs</a>
             <a href={anchor('faq')} className="hover:text-[#e7edf3] transition-colors">FAQ</a>
             <a 
               href="https://docs.vektra.games" 
@@ -144,6 +145,7 @@ export function Navbar({ onOpenSubmitModal, onOpenDiscordModal }: NavbarProps) {
             >
               Pricing
             </a>
+            <a href="/freqs" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#e7edf3] hover:bg-[#11161a] rounded-md">Freqs</a>
             <a
               href={anchor('faq')}
               onClick={() => setIsMobileMenuOpen(false)}

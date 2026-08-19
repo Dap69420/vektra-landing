@@ -43,8 +43,8 @@ const PLANS: Plan[] = [
     id: 'starter',
     name: 'Starter',
     price: '$3.99',
-    period: 'every 2 months',
-    note: '2-month minimum · or free with ads',
+    period: '/month',
+    note: 'With ads available',
     tagline: 'Full Discord bot workflow for growing labels and collectives.',
     features: [
       'Everything in Free',
@@ -59,7 +59,7 @@ const PLANS: Plan[] = [
   {
     id: 'pro',
     name: 'Pro',
-    price: '$8.99',
+    price: '$6.99',
     period: '/month',
     tagline: 'Deep customization, analytics, and priority handling.',
     features: [
@@ -74,7 +74,7 @@ const PLANS: Plan[] = [
   {
     id: 'pro_plus',
     name: 'Pro+',
-    price: '$16.99',
+    price: '$14.99',
     period: '/month',
     tagline: 'White-label hosting and full control for serious labels.',
     features: [
@@ -96,18 +96,18 @@ const PAYMENT_METHODS = [
   },
   {
     icon: Gift,
-    name: 'Gift Cards',
-    detail: 'Accepted at checkout',
+    name: 'Card / PayPal',
+    detail: 'Buy crypto, then verify your transaction',
   },
   {
     icon: Gamepad2,
-    name: 'Robux',
-    detail: 'Pay with Roblox currency',
+    name: 'Other methods',
+    detail: 'Ask support before sending anything',
   },
   {
     icon: Zap,
-    name: 'Discord Nitro',
-    detail: 'Nitro & server boosts accepted',
+    name: 'Support',
+    detail: 'Discord ticket or email support',
   },
 ];
 
@@ -198,8 +198,7 @@ export function PricingSection() {
           </div>
 
           <p className="text-center text-[11px] text-[#9aa6b2] font-mono mt-8">
-            Pay instantly with USDT/USDC at the checkout — or use gift cards, Robux, or Discord
-            Nitro/boosts via <a href="mailto:support@dapmedia.tech" className="text-emerald-400 hover:underline">support@dapmedia.tech</a> or a Discord ticket.
+            Pay directly with crypto at checkout. For card or PayPal, buy USDT through a provider of your choice and submit the BNB Smart Chain transaction hash for verification.
           </p>
         </div>
       </section>
