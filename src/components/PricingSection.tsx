@@ -97,7 +97,7 @@ const PAYMENT_METHODS = [
   {
     icon: Gift,
     name: 'Card / PayPal',
-    detail: 'Buy crypto, then verify your transaction',
+    detail: 'Coming soon',
   },
   {
     icon: Gamepad2,
@@ -198,7 +198,7 @@ export function PricingSection() {
           </div>
 
           <p className="text-center text-[11px] text-[#9aa6b2] font-mono mt-8">
-            Pay directly with crypto at checkout. For card or PayPal, buy USDT through a provider of your choice and submit the BNB Smart Chain transaction hash for verification.
+            Pay directly with crypto (USDT or USDC) at checkout. Card and PayPal payments are coming soon.
           </p>
         </div>
       </section>

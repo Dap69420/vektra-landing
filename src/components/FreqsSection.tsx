@@ -46,7 +46,7 @@ const EARN_PLANS = [
 const FREQS_PACKS = [
   { freqs: '500', price: '$5', detail: 'Native crypto', bonus: 'Base pack' },
   { freqs: '1,100', price: '$10', detail: 'Native crypto', bonus: '10% introductory bonus', popular: true },
-  { freqs: '2,500', price: '$20', detail: 'Crypto or MoonPay', bonus: '25% introductory bonus' },
+  { freqs: '2,500', price: '$20', detail: 'Native crypto', bonus: '25% introductory bonus' },
 ];
 
 export function FreqsSection() {
@@ -76,7 +76,7 @@ export function FreqsSection() {
           <div className="text-center mb-10">
             <p className="text-emerald-400 text-xs font-mono font-semibold uppercase tracking-wider mb-3">Buy Freqs</p>
             <h2 className="text-3xl font-bold text-[#e7edf3] tracking-tight mb-3">Choose your pack</h2>
-            <p className="text-sm text-[#9aa6b2] max-w-xl mx-auto leading-relaxed">Pay directly with your crypto wallet. MoonPay requires a $20 minimum, so it is available only for the 2,500 Freqs pack.</p>
+            <p className="text-sm text-[#9aa6b2] max-w-xl mx-auto leading-relaxed">Pay directly with your crypto wallet — USDT or USDC. Card and PayPal payments are coming soon.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
             {FREQS_PACKS.map((pack) => (
@@ -87,7 +87,7 @@ export function FreqsSection() {
                 <div className="mt-2 flex items-baseline gap-2"><strong className="text-3xl font-mono text-[#e7edf3]">{pack.price}</strong><span className="text-xs text-[#9aa6b2]">one time</span></div>
                 <p className="mt-3 text-xs text-emerald-400 font-mono">{pack.bonus}</p>
                 <p className="mt-2 text-xs text-[#9aa6b2]">{pack.detail}</p>
-                <ul className="mt-5 flex-1 space-y-2 text-xs text-[#c3ccd6]"><li className="flex gap-2"><Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />USDT or USDC via direct crypto checkout</li><li className="flex gap-2"><Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />Transaction-hash verification fallback</li></ul>
+                <ul className="mt-5 flex-1 space-y-2 text-xs text-[#c3ccd6]"><li className="flex gap-2"><Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />USDT or USDC via direct crypto checkout</li><li className="flex gap-2"><Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />Card & PayPal payments coming soon</li></ul>
                 <a href={`https://dashboard.vektra.games/checkout?freqs=${pack.freqs.replace(',', '')}`} className={`mt-6 inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-xs font-semibold ${pack.popular ? 'bg-emerald-600 hover:bg-emerald-500 text-white' : 'border border-[#2a3540] bg-[#161c22] hover:bg-[#1f2730] text-[#e7edf3]'}`}>Buy {pack.freqs} Freqs <ArrowUpRight className="w-3.5 h-3.5" /></a>
               </article>
             ))}
